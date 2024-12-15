@@ -1,14 +1,12 @@
 # HEART-DISEASE-ANALYSIS-
 Heart disease analysis is the process of using data to identify and predict heart disease.
 
-Create histogram for showing cholesterol with Number of bins 5
-Create Boxplot for showing trestbps and comment what the dark spot indicate
-Find and print the percentage of females and males heart disease
-Create a scatter plot for showing age and ST depression induced by exercise relative to rest
-Create histogram for showing cholesterol with Number of bins 5
-Create Boxplot for showing trestbps and comment what the dark spot indicate
-Find and print the percentage of females and males heart disease
-Create a scatter plot for showing age and ST depression induced by exercise relative to rest
+1.Create histogram for showing cholesterol with Number of bins 5
+2.Create Boxplot for showing trestbps and comment what the dark spot indicate
+3.Find and print the percentage of females and males heart disease
+4.Create a scatter plot for showing age and ST depression induced by exercise relative to rest
+
+#importing libraries
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -25,7 +23,7 @@ SEX={0:"female",1:"male"}
 df.sex.replace(SEX,inplace=True)
 df.head()
 
-#Create histogram for showing Cholesterol with Number of bins 5
+#1.Create histogram for showing Cholesterol with Number of bins 5
 plt.hist(df.chol,bins=5,rwidth=0.7)
 plt.grid(linestyle="--")
 plt.xlabel("Cholesterol")
@@ -42,7 +40,7 @@ plt.show()
 
 
 
-#Create Boxplot for showing trestbps and comment what the dark spot indicate
+#2.Create Boxplot for showing trestbps and comment what the dark spot indicate
 
 plt.boxplot(df.trestbps)
 plt.grid(linestyle="--")
@@ -56,7 +54,7 @@ plt.ylabel("Resting blood pressure (in mm Hg)")
 plt.title("Boxplot for showing trestbps using Seaborn")
 plt.show()
 
-#Create bar plot for showing Gender and target.
+#3.Create bar plot for showing Gender and target.
 
 #draw a bar plot of target by sex
 #Change the sex(0,1)=(female,male)
@@ -77,7 +75,7 @@ print("Percentages of females vs. males Heart Disease is:\n","Female:",\
 sns.scatterplot(x="age",y="oldpeak",data=df)
 plt.show()
 
-#Create a scatter plot for showing Age and ST depression induced by excercise relative to rest
+#4.Create a scatter plot for showing Age and ST depression induced by excercise relative to rest
 
 sns.scatterplot(x="age",y="oldpeak",data=df)
 plt.show()
